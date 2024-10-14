@@ -1,8 +1,8 @@
-# Your Name Here
+# Elijah Gertsch
 # UWYO COSC 1010
-# Submission Date
+# 10/14/2024
 # HW 01
-# Lab Section: 
+# Lab Section: 11
 # Sources, people worked with, help given to: 
 # your
 # comments
@@ -14,12 +14,12 @@
 # in different subjects.
 # 
 # Student Data:
-# students = [
-#     {"name": "Alice", "scores": {"Math": 85, "Science": 90, "English": 78}},
-#     {"name": "Bob", "scores": {"Math": 70, "Science": 88, "English": 82}},
-#     {"name": "Charlie", "scores": {"Math": 92, "Science": 81, "English": 89}},
-#     {"name": "David", "scores": {"Math": 60, "Science": 75, "English": 80}}
-# ]
+students = [
+     {"name": "Alice", "scores": {"Math": 85, "Science": 90, "English": 78}},
+     {"name": "Bob", "scores": {"Math": 70, "Science": 88, "English": 82}},
+     {"name": "Charlie", "scores": {"Math": 92, "Science": 81, "English": 89}},
+     {"name": "David", "scores": {"Math": 60, "Science": 75, "English": 80}}
+ ]
 
 #Write a Python program that:
 # 1. Calculates the average score for each student.
@@ -30,6 +30,13 @@
 # whose average score is greater than 80.
 
 #Solution
+
+average_score = 0
+length = len("scores")
+for student, student_info in students:
+    print(f"{student["name"]}'s average score:")
+    for key, value in student_info.items():
+        average_score = average_score + (value / 3)
 
 
 
