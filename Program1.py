@@ -31,13 +31,22 @@ students = [
 
 #Solution
 
-average_score = 0
-length = len("scores")
-for student, student_info in students:
-    print(f"{student["name"]}'s average score:")
-    for key, value in student_info.items():
-        average_score = average_score + (value / 3)
+alice_score = students[0]["scores"]
+alice_ave = sum(alice_score.values())/len(alice_score)
+bob_score = students[1]["scores"]
+bob_ave = sum(bob_score.values())/len(alice_score)
+charlie_score = students[2]["scores"]
+charlie_ave = sum(charlie_score.values())/len(alice_score)
+david_score = students[3]["scores"]
+david_ave = sum(david_score.values())/len(alice_score)
 
+averages = {}
 
+averages['alice'] = alice_ave
+averages['bob'] = bob_ave
+averages['charlie'] = charlie_ave
+averages['david'] = david_ave
 
-
+for key in averages:
+    if averages[key] > 80:
+     print(key)
